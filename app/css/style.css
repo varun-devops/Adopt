@@ -1,0 +1,140 @@
+@import 'tailwindcss';
+
+/* Additional styles */
+@import './additional-styles/utility-patterns.css' layer(components);
+@import './additional-styles/theme.css';
+
+@plugin "@tailwindcss/forms" {
+  strategy: base;
+}
+
+@theme {
+  --font-inter: "Montserrat", var(--font-sans);
+  --font-nacelle: "Montserrat", var(--font-sans);
+
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.5384;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.5715;
+  --text-base: 0.9375rem;
+  --text-base--line-height: 1.5333;
+  --text-base--letter-spacing: -0.0125em;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.5;
+  --text-lg--letter-spacing: -0.0125em;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.5;
+  --text-xl--letter-spacing: -0.0125em;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 1.415;
+  --text-2xl--letter-spacing: -0.0268em;
+  --text-3xl: 1.75rem;
+  --text-3xl--line-height: 1.3571;
+  --text-3xl--letter-spacing: -0.0268em;
+  --text-4xl: 2.5rem;
+  --text-4xl--line-height: 1.1;
+  --text-4xl--letter-spacing: -0.0268em;
+  --text-5xl: 3.5rem;
+  --text-5xl--line-height: 1;
+  --text-5xl--letter-spacing: -0.0268em;
+  --text-6xl: 4rem;
+  --text-6xl--line-height: 1;
+  --text-6xl--letter-spacing: -0.0268em;
+  --text-7xl: 4.5rem;
+  --text-7xl--line-height: 1;
+  --text-7xl--letter-spacing: -0.0268em;
+
+  --animate-shine: shine 5s ease-in-out 500ms infinite;
+  --animate-gradient: gradient 6s linear infinite;
+
+  @keyframes shine {
+    0% {
+      top: 0;
+      transform: scaleY(5);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    20% {
+      top: 100%;
+      transform: scaleY(10);
+      opacity: 0;
+    }
+    100% {
+      top: 100%;
+      transform: scaleY(1);
+      opacity: 0;
+    }
+  }
+  @keyframes gradient {
+    to {
+      background-position: 200% center;
+    }
+  }
+}
+
+@layer properties;
+@layer theme, base, components, utilities;
+
+@layer theme {
+  :root, :host {
+    --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --color-red-500: #f061a2;
+    --color-indigo-200: #c7d2ff;
+    --color-indigo-300: #fca5cf;
+    --color-indigo-400: #f9d0e361;
+    --color-indigo-500: #f9a1c9;
+    --color-indigo-600: #f15f43;
+    --color-slate-400: oklch(0.78 0.12 36.25);
+    --color-gray-50: #fff;
+    --color-gray-200: #f8f9fa;
+    --color-gray-300: #e9ecef;
+    --color-gray-400: #ced4da;
+    --color-gray-600: #efa5c645;
+    --color-gray-700: #f2242442;
+    --color-gray-800: #5f474e;
+    --color-gray-900: #272727;
+    --color-gray-950: #201f1f;
+
+        /* --color-red-500: #ED247F;
+    --color-indigo-200: #C7D2FF;
+    --color-indigo-300: #A5B4FC;
+    --color-indigo-400: #818CF8;
+    --color-indigo-500: #3950A3;
+    --color-indigo-600: #F15F43;
+    --color-slate-400: oklch(70.4% .04 256.788);
+    --color-gray-50: #ffffff;
+    --color-gray-200: #f8f9fa;
+    --color-gray-300: #e9ecef;
+    --color-gray-400: #ced4da;
+    --color-gray-600: #6c757d;
+    --color-gray-700: #495057;
+    --color-gray-800: #343a40;
+    --color-gray-900: #212529;
+    --color-gray-950: #0d1117;
+    --color-white: #FFFFFF;
+    --color-black: #000000; */
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+  }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}

@@ -1,0 +1,164 @@
+/* Starfield Background */
+.starfield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: transparent;
+  animation: drift 120s linear infinite;
+}
+.starfield::before,
+.starfield::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#444 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.2;
+}
+.starfield::after {
+  transform: translate(25px, 40px);
+  opacity: 0.1;
+}
+@keyframes drift {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Dashboard Container */
+.dashboard {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center Icon */
+.center-icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #1a1a2e;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(57, 80, 163, 0.7);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Orbit Base */
+.orbit {
+  position: absolute;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+.orbit1 {
+  width: 300px;
+  height: 300px;
+  animation-name: rotate1;
+  animation-duration: 80s;
+}
+.orbit2 {
+  width: 400px;
+  height: 400px;
+  animation-name: rotate2;
+  animation-duration: 60s;
+}
+.orbit3 {
+  width: 500px;
+  height: 500px;
+  animation-name: rotate3;
+  animation-duration: 40s;
+}
+.orbit4 {
+  width: 600px;
+  height: 600px;
+  animation-name: rotate4;
+  animation-duration: 20s;
+}
+
+@keyframes rotate1 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate2 {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rotate3 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate4 {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Avatar Styling */
+.avatar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translateX(-50%);
+}
+.avatar-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #1a1a2e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, var(--color-indigo-500), var(--color-red-500));
+}
+
+/* Labels */
+.label {
+  position: absolute;
+  padding: 4px 8px;
+  background: rgba(26, 26, 46, 0.8);
+  color: #fff;
+  font-size: 12px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.label.plan {
+  top: 50%;
+  left: calc(50% - 150px);
+  transform: translate(-50%, -120%);
+}
+.label.prototype {
+  top: 50%;
+  left: calc(50% + 200px);
+  transform: translate(-50%, -120%);
+}
+.label.projects {
+  top: calc(50% + 260px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.label.execute {
+  top: calc(50% - 260px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
