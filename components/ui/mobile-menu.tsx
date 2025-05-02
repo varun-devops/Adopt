@@ -1,8 +1,9 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
-import { Transition } from '@headlessui/react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import { Transition } from '@headlessui/react'
+import ThemeToggle from '../theme-toggle'
 
 export default function MobileMenu() {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
@@ -13,10 +14,10 @@ export default function MobileMenu() {
   // close the mobile menu on click outside
   useEffect(() => {
     const clickHandler = ({ target }: { target: EventTarget | null }): void => {
-      if (!mobileNav.current || !trigger.current) return
-      if (!mobileNavOpen || mobileNav.current.contains(target as Node) || trigger.current.contains(target as Node)) return
+      if (!mobileNav.current || !trigger.current) return;
+      if (!mobileNavOpen || mobileNav.current.contains(target as Node) || trigger.current.contains(target as Node)) return;
       setMobileNavOpen(false)
-    }
+    };
     document.addEventListener('click', clickHandler)
     return () => document.removeEventListener('click', clickHandler)
   })
@@ -24,9 +25,9 @@ export default function MobileMenu() {
   // close the mobile menu if the esc key is pressed
   useEffect(() => {
     const keyHandler = ({ keyCode }: { keyCode: number }): void => {
-      if (!mobileNavOpen || keyCode !== 27) return
+      if (!mobileNavOpen || keyCode !== 27) return;
       setMobileNavOpen(false)
-    }
+    };
     document.addEventListener('keydown', keyHandler)
     return () => document.removeEventListener('keydown', keyHandler)
   })
@@ -83,20 +84,11 @@ export default function MobileMenu() {
                 About Us
               </Link>
             </li>
-            <li className="py-2 my-2 border-t border-gray-700">
+            <li className="py-2 my-2 border-t border-gray-700 flex justify-between items-center">
               <Link href="/signin" className="flex items-center py-2 text-gray-300 hover:text-white" onClick={() => setMobileNavOpen(false)}>
                 Sign in
               </Link>
-            </li>
-            <li>
-              <Link 
-                href="/signup" 
-                className="btn-sm my-2 w-full bg-linear-to-t from-indigo-600 to-red-500 text-white shadow-lg shadow-indigo-500/25" 
-                onClick={() => setMobileNavOpen(false)}
-              >
-                <span>Sign up</span>
-                <span className="ml-1 tracking-normal text-white/50">-&gt;</span>
-              </Link>
+              <ThemeToggle />
             </li>
           </ul>
         </Transition>
