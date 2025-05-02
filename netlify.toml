@@ -1,31 +1,66 @@
 [build]
-  command = "npm run build"
-  publish = ".next"
-  # Add base directory specification
-  base = "."
+command = "npm run build"
+publish = ".next"
+base = "."
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-# Disable Git submodule fetching to resolve the error with missing submodule URL
-[build.environment]
-  GIT_LFS_FETCH_INCLUDE = ""
+  [build.environment]
   GIT_LFS_ENABLED = "false"
   GIT_SUBMODULE_FETCH = "false"
-  # Add explicit submodule settings to ignore the problematic Adopt submodule
-  GIT_SUBMODULE_STRATEGY = "none"
-  IGNORE_MISSING_SUBMODULES = "true"
 
-# Add pull request configuration
-[context.deploy-preview]
-  command = "npm run build"
+[[plugins]]
+package = "@netlify/plugin-nextjs"
 
-# Add branch deployment configuration
-[context.branch-deploy]
-  command = "npm run build"
+[[headers]]
+for = "/_next/static/*"
 
-# Ensure all redirect rules apply in all contexts
+  [headers.values]
+  Cache-Control = "public, max-age=31536000, immutable"
+
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+from = "/*"
+to = "/index.html"
+status = 200
+
+[[redirects]]
+from = "/_next/image"
+to = "/.netlify/images?url=:url&w=:width&q=:quality"
+status = 200
+
+  [redirects.query]
+  url = ":url"
+  w = ":width"
+  q = ":quality"
+
+[[redirects]]
+from = "/_ipx/*"
+to = "/.netlify/images?url=:url&w=:width&q=:quality"
+status = 200
+
+  [redirects.query]
+  url = ":url"
+  w = ":width"
+  q = ":quality"
+
+[context]
+
+  [context.deploy-preview]
+  command = "npm run build"
+
+  [context.branch-deploy]
+  command = "npm run build"
+
+  [context.production]
+
+    [[context.production.headers]]
+    for = "/_next/static/*"
+
+      [context.production.headers.values]
+      Cache-Control = "public, max-age=31536000, immutable"
+
+  [context.main]
+
+    [[context.main.headers]]
+    for = "/_next/static/*"
+
+      [context.main.headers.values]
+      Cache-Control = "public, max-age=31536000, immutable"
