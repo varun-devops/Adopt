@@ -1,6 +1,8 @@
 [build]
   command = "npm run build"
   publish = ".next"
+  # Add base directory specification
+  base = "."
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -10,3 +12,17 @@
   GIT_LFS_FETCH_INCLUDE = ""
   GIT_LFS_ENABLED = "false"
   GIT_SUBMODULE_FETCH = "false"
+
+# Add pull request configuration
+[context.deploy-preview]
+  command = "npm run build"
+
+# Add branch deployment configuration
+[context.branch-deploy]
+  command = "npm run build"
+
+# Ensure all redirect rules apply in all contexts
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
