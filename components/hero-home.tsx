@@ -34,6 +34,20 @@ export default function HeroHome() {
     };
   }, []);
 
+  const [typedText, setTypedText] = useState("");
+  const fullText = "IDEATE INNOVATE INVEST";
+
+  useEffect(() => {
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      setTypedText((prev) => prev + fullText[index]);
+      index++;
+      if (index === fullText.length) clearInterval(typingInterval);
+    }, 150); 
+
+    return () => clearInterval(typingInterval);
+  }, []);
+
   return (
     <section>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -45,17 +59,10 @@ export default function HeroHome() {
               className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl"
               data-aos="fade-up"
             >
-              sbddagfluiasflhsabvaifduvbifao sadfsdaf
+              {typedText}
             </h1>
             <div className="mx-auto max-w-3xl">
-              <p
-                className="mb-8 text-xl text-indigo-200/65"
-                data-aos="fade-up"
-                data-aos-delay={200}
-              >
-                svhsfnuiebfuiasbvsabasjkvbasjkvasbvuiaavjkasvjhasvuycvhja asbasig as gfias gfaf gasyuf gasyufasbvasikvuiasbvasbvs
-                asuibasuiasuvas.
-              </p>
+              
               <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
                 <div data-aos="fade-up" data-aos-delay={400}>
                   <a
@@ -85,22 +92,28 @@ export default function HeroHome() {
           {/* Stats Section */}
           <div 
             ref={statsRef}
-            className="grid grid-cols-1 gap-6 pt-8 md:grid-cols-2 lg:grid-cols-4" 
+            className="grid grid-cols-1 gap-8 pt-12 md:grid-cols-2 lg:grid-cols-4" 
             data-aos="fade-up" 
             data-aos-delay={800}
           >
             {stats.map((stat, index) => (
               <div 
                 key={index} 
-                className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-6 shadow-lg transition-transform hover:scale-[1.02]"
+                className="relative overflow-hidden rounded-3xl border-2 border-[#3d2b2b] bg-clip-border p-8 shadow-xl transition-transform hover:scale-[1.05] hover:shadow-2xl"
               >
                 {/* Decorative background element */}
-                <div className="absolute -right-4 -top-4 h-32 w-32 rounded-full bg-gradient-to-br from-indigo-600/20 to-indigo-500/10 blur-2xl" />
+                <div className="absolute -right-6 -top-6 h-40 w-40 rounded-full bg-gradient-to-br from-indigo-600/30 to-indigo-500/20 blur-3xl" />
                 
                 {/* SVG Icon based on stat type */}
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-600 to-red-500 p-3 shadow-lg">
+                <div 
+                  className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl p-4 shadow-lg"
+                  style={{
+                    border: "1px solid #3d2b2b",
+                    background: "#2e292a",
+                  }}
+                >
                   {stat.icon === 'portfolio' && (
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-7 w-7 text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-8 w-8 text-white">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
                     </svg>
                   )}
@@ -125,8 +138,8 @@ export default function HeroHome() {
                 </div>
                 
                 {/* Count with animation */}
-                <div className="mb-1 font-semibold">
-                  <span className="relative inline-flex text-3xl font-bold text-white">
+                <div className="mb-2 font-semibold">
+                  <span className="relative inline-flex text-3xl font-extrabold text-white">
                     {countedUp ? (
                       <CountUpAnimation
                         end={stat.value}
@@ -142,7 +155,7 @@ export default function HeroHome() {
                 </div>
                 
                 {/* Label */}
-                <p className="text-gray-300">{stat.label}</p>
+                <p className="text-lg font-medium text-gray-400">{stat.label}</p>
               </div>
             ))}
           </div>

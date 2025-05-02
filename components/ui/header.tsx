@@ -7,7 +7,7 @@ import MobileMenu from '../ui/mobile-menu'
 import { Transition } from '@headlessui/react'
 import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/navigation'
-
+import ThemeToggle from '../theme-toggle'
 
 export default function Header() {
   const [top, setTop] = useState<boolean>(true)
@@ -37,7 +37,7 @@ export default function Header() {
             {/* Desktop menu links */}
             <ul className="flex grow flex-wrap items-center justify-end">
               <li>
-                <Link href="/startups" className="flex items-center px-3 py-2 text-sm font-medium text-gray-300 transition duration-150 ease-in-out hover:text-white">
+                <Link href="/startup" className="flex items-center px-3 py-2 text-sm font-medium text-gray-300 transition duration-150 ease-in-out hover:text-white">
                   Startups
                 </Link>
               </li>
@@ -55,14 +55,12 @@ export default function Header() {
 
             {/* Desktop sign in links */}
             <ul className="flex items-center">
-              <li>
-                <Link href="/signin" className="flex items-center px-3 py-2 text-sm font-medium text-gray-300 transition duration-150 ease-in-out hover:text-white">
-                  Sign in
-                </Link>
+              <li className="mr-1">
+                <ThemeToggle />
               </li>
               <li>
-                <Link href="/signup" className="btn-sm ml-2 bg-linear-to-t from-indigo-600 to-red-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-lg shadow-indigo-500/25 hover:bg-[length:100%_200%]">
-                  <span>Sign up</span>
+                <Link href="/signin" className="btn-sm ml-2 bg-linear-to-t from-indigo-600 to-red-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-lg shadow-indigo-500/25 hover:bg-[length:100%_200%]">
+                  <span>Sign in</span>
                   <span className="ml-1 tracking-normal text-white/50">-&gt;</span>
                 </Link>
               </li>
