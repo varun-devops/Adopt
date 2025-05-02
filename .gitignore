@@ -37,3 +37,7 @@ next-env.d.ts
 
 # contentlayer
 .contentlayer
+
+# Submodule related files causing Netlify deployment issues
+.gitmodules
+/Adopt/
