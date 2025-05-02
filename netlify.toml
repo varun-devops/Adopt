@@ -12,6 +12,9 @@
   GIT_LFS_FETCH_INCLUDE = ""
   GIT_LFS_ENABLED = "false"
   GIT_SUBMODULE_FETCH = "false"
+  # Add explicit submodule settings to ignore the problematic Adopt submodule
+  GIT_SUBMODULE_STRATEGY = "none"
+  IGNORE_MISSING_SUBMODULES = "true"
 
 # Add pull request configuration
 [context.deploy-preview]
