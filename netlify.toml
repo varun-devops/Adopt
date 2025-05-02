@@ -1,13 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "build"  # or your output directory
-
-[build.environment]
-  NODE_VERSION = "18"  # use the Node.js version your project requires
-
-# Disable Git submodules completely
-[git]
-  submodules = false
+  publish = ".next"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
