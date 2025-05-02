@@ -4,3 +4,9 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Disable Git submodule fetching to resolve the error with missing submodule URL
+[build.environment]
+  GIT_LFS_FETCH_INCLUDE = ""
+  GIT_LFS_ENABLED = "false"
+  GIT_SUBMODULE_FETCH = "false"
