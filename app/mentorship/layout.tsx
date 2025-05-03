@@ -2,7 +2,7 @@ import React from "react";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
 
-export default function StartupLayout({ children }: { children: React.ReactNode }) {
+export default function MentorshipLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header />

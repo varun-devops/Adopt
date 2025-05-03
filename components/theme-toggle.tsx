@@ -48,7 +48,7 @@ export default function ThemeToggle() {
         </svg>
       ) : (
         // Moon icon for light mode
-        <svg className="w-5 h-5 text-gray-700 transition-transform hover:rotate-12 duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-5 h-5 text-gray-800 transition-transform hover:rotate-12 duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"

@@ -1,23 +1,22 @@
 'use client'
 
 import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
-export default function AOS() {
+export default function AOSWrapper({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   useEffect(() => {
- 
-    if (typeof window !== 'undefined') {
-      const AOS = require('aos')
-      require('aos/dist/aos.css')
-      
-      
-      AOS.init({
-        once: true,
-        disable: 'phone',
-        duration: 600,
-        easing: 'ease-out-sine',
-      })
-    }
+    AOS.init({
+      once: true,
+      disable: 'phone',
+      duration: 600,
+      easing: 'ease-out-sine',
+    })
   }, [])
 
-  return null
+  return <>{children}</>
 }
