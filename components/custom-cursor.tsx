@@ -1,65 +1,95 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react';
 
 export default function CustomCursor() {
-  const [position, setPosition] = useState({ x: 0, y: 0 })
-  const [followerPosition, setFollowerPosition] = useState({ x: 0, y: 0 })
-  const [isVisible, setIsVisible] = useState(false)
+  const [position, setPosition] = useState({ x: -100, y: -100 });
+  const [followerPosition, setFollowerPosition] = useState({ x: -100, y: -100 });
+  const [isVisible, setIsVisible] = useState(false);
+  const [isClicking, setIsClicking] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
-    // Add cursor elements to DOM
-    if (typeof document !== 'undefined') {
-      // Check if cursor elements already exist
-      if (!document.querySelector('.custom-cursor')) {
-        const cursor = document.createElement('div')
-        cursor.classList.add('custom-cursor')
-        document.body.appendChild(cursor)
-      }
-      
-      if (!document.querySelector('.custom-cursor-follower')) {
-        const follower = document.createElement('div')
-        follower.classList.add('custom-cursor-follower')
-        document.body.appendChild(follower)
-      }
+    // Only show cursor on non-touch devices
+    if (typeof window !== 'undefined' && 'ontouchstart' in window) {
+      document.body.style.cursor = 'auto';
+      return;
     }
 
-    const updateCursorPosition = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY })
-      // Delay the follower for a smooth trailing effect
+    const updatePosition = (e: MouseEvent) => {
+      setPosition({ x: e.clientX, y: e.clientY });
       setTimeout(() => {
-        setFollowerPosition({ x: e.clientX, y: e.clientY })
-      }, 70)
-    }
+        setFollowerPosition({ x: e.clientX, y: e.clientY });
+      }, 100);
+    };
 
-    const handleMouseEnter = () => setIsVisible(true)
-    const handleMouseLeave = () => setIsVisible(false)
+    const handleMouseEnter = () => setIsVisible(true);
+    const handleMouseLeave = () => setIsVisible(false);
+    const handleMouseDown = () => setIsClicking(true);
+    const handleMouseUp = () => setIsClicking(false);
 
-    window.addEventListener('mousemove', updateCursorPosition)
-    document.addEventListener('mouseenter', handleMouseEnter)
-    document.addEventListener('mouseleave', handleMouseLeave)
+    // Detect when cursor is over a clickable element
+    const handleMouseOver = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const isHoverable = 
+        target.tagName.toLowerCase() === 'a' || 
+        target.tagName.toLowerCase() === 'button' ||
+        target.closest('a') !== null || 
+        target.closest('button') !== null ||
+        target.classList.contains('hoverable');
+
+      setIsHovering(isHoverable);
+    };
+
+    document.addEventListener('mousemove', updatePosition);
+    document.addEventListener('mouseenter', handleMouseEnter);
+    document.addEventListener('mouseleave', handleMouseLeave);
+    document.addEventListener('mousedown', handleMouseDown);
+    document.addEventListener('mouseup', handleMouseUp);
+    document.addEventListener('mouseover', handleMouseOver);
 
     return () => {
-      window.removeEventListener('mousemove', updateCursorPosition)
-      document.removeEventListener('mouseenter', handleMouseEnter)
-      document.removeEventListener('mouseleave', handleMouseLeave)
-    }
-  }, [])
+      document.removeEventListener('mousemove', updatePosition);
+      document.removeEventListener('mouseenter', handleMouseEnter);
+      document.removeEventListener('mouseleave', handleMouseLeave);
+      document.removeEventListener('mousedown', handleMouseDown);
+      document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener('mouseover', handleMouseOver);
+    };
+  }, []);
 
+  // Hide default cursor
   useEffect(() => {
-    const cursor = document.querySelector('.custom-cursor') as HTMLElement
-    const follower = document.querySelector('.custom-cursor-follower') as HTMLElement
-
-    if (cursor && follower) {
-      cursor.style.left = `${position.x}px`
-      cursor.style.top = `${position.y}px`
-      cursor.style.opacity = isVisible ? '1' : '0'
-
-      follower.style.left = `${followerPosition.x}px`
-      follower.style.top = `${followerPosition.y}px`
-      follower.style.opacity = isVisible ? '0.7' : '0'
+    // Only hide cursor on non-touch devices
+    if (typeof window !== 'undefined' && !('ontouchstart' in window)) {
+      document.body.style.cursor = 'none';
     }
-  }, [position, followerPosition, isVisible])
+    
+    return () => {
+      document.body.style.cursor = 'auto';
+    };
+  }, []);
 
-  return null
+  if (typeof window !== 'undefined' && 'ontouchstart' in window) {
+    return null;
+  }
+
+  return (
+    <>
+      <div 
+        className={`custom-cursor ${isVisible ? 'opacity-100' : 'opacity-0'} ${isClicking ? 'scale-75' : ''} ${isHovering ? 'scale-150 mix-blend-difference' : ''}`}
+        style={{ 
+          left: `${position.x}px`, 
+          top: `${position.y}px` 
+        }}
+      />
+      <div 
+        className={`custom-cursor-follower ${isVisible ? 'opacity-50' : 'opacity-0'} ${isClicking ? 'scale-75' : ''} ${isHovering ? 'scale-150' : ''}`}
+        style={{ 
+          left: `${followerPosition.x}px`, 
+          top: `${followerPosition.y}px` 
+        }}
+      />
+    </>
+  );
 }

@@ -1,4 +1,5 @@
 import PageIllustration from "@/components/page-illustration";
+import Header from "@/components/ui/header";
 
 export default function AuthLayout({
   children,
@@ -6,10 +7,12 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="relative flex grow flex-col">
-      <PageIllustration multiple />
-
-      {children}
-    </main>
+    <>
+      <Header />
+      <main className="relative flex grow flex-col pt-16 md:pt-20">
+        <PageIllustration multiple />
+        {children}
+      </main>
+    </>
   );
 }

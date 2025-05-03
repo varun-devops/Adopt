@@ -1,9 +1,6 @@
 import { Inter } from 'next/font/google'
-import AOS from './aos'
-import PageIllustration from '@/components/page-illustration'
-import Header from '@/components/ui/header'
 import CustomCursor from '@/components/custom-cursor'
-import Footer from '@/components/ui/footer'
+import AOSWrapper from '@/app/aos'
 import './css/style.css'
 import "../styles/orbit.css";
 
@@ -14,8 +11,8 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'Open PRO',
-  description: 'Next.js Page Router Template',
+  title: 'Adopt Network',
+  description: 'Investment Platform for Startups and Investors',
 }
 
 export default function RootLayout({
@@ -29,16 +26,10 @@ export default function RootLayout({
         suppressHydrationWarning 
         className={`${inter.variable} font-inter antialiased bg-gray-950 text-gray-200 tracking-tight`}
       >
-        <div className="flex min-h-screen flex-col overflow-hidden">
-          <Header />
-          <main className="grow">
-            <PageIllustration />
-            {children}
-          </main>
-    
+        <AOSWrapper>
           <CustomCursor />
-        </div>
-        <AOS />
+          {children}
+        </AOSWrapper>
       </body>
     </html>
   )

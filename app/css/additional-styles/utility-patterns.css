@@ -29,11 +29,26 @@ input[type='search']::-webkit-search-results-decoration {
     @apply border border-gray-700 bg-gray-900/50 focus:border-gray-600 focus:ring-0 focus:ring-offset-0;
 }
 
+/* Light mode form adjustments */
+:root:not(.dark) .form-input,
+:root:not(.dark) .form-textarea,
+:root:not(.dark) .form-multiselect,
+:root:not(.dark) .form-select,
+:root:not(.dark) .form-checkbox,
+:root:not(.dark) .form-radio {
+    @apply border-gray-300 bg-white/90 text-gray-800;
+}
+
 .form-input,
 .form-textarea,
 .form-multiselect,
 .form-select {
-    @apply rounded-lg px-4 py-2.5 text-sm text-gray-200;
+    @apply rounded-lg px-4 py-2.5 text-sm;
+}
+
+:root:not(.dark) .form-input,
+:root:not(.dark) .form-textarea {
+    @apply placeholder-gray-500;
 }
 
 .form-input,
@@ -64,4 +79,21 @@ input[type='search']::-webkit-search-results-decoration {
 /* Apply Montserrat to body */
 body {
   font-family: "Montserrat", sans-serif;
+}
+
+/* No borders for illustrations */
+img, svg, .illustration, [class*='illustration'] {
+    @apply border-0 shadow-none;
+}
+
+.illustration-container img,
+.illustration-container svg {
+    @apply border-0 shadow-none bg-transparent backdrop-blur-none;
+}
+
+/* Keep PNG and SVG images clean without borders */
+img[src$=".png"],
+img[src$=".svg"],
+svg {
+    @apply border-0 shadow-none bg-transparent;
 }
