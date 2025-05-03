@@ -38,7 +38,7 @@ export default function ThemeToggle() {
     >
       {/* Sun icon */}
       <svg 
-        className={`absolute left-1 h-4 w-4 text-yellow-500 transition-opacity duration-200 ${darkMode ? 'opacity-0' : 'opacity-100'} z-[9999]`}
+        className={`absolute left-1 h-4 w-4 text-yellow-500 transition-opacity duration-200 ${darkMode ? 'opacity-0' : 'opacity-100'} z-10`}
         fill="none" 
         viewBox="0 0 24 24" 
         stroke="currentColor"
@@ -53,7 +53,7 @@ export default function ThemeToggle() {
       
       {/* Moon icon */}
       <svg 
-        className={`absolute right-1.5 h-5 w-5 text-blue-300 transition-opacity duration-200 ${darkMode ? 'opacity-100' : 'opacity-0'} z-[9999]`}
+        className={`absolute right-1.5 h-5 w-5 text-blue-300 transition-opacity duration-200 ${darkMode ? 'opacity-100' : 'opacity-0'} z-10`}
         fill="none" 
         viewBox="0 0 24 24" 
         stroke="currentColor"
