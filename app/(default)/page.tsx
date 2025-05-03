@@ -1,8 +1,3 @@
-export const metadata = {
-  title: "Adopt",
-  description: "Investment website",
-};
-
 import PageIllustration from "@/components/page-illustration";
 import Hero from "@/components/hero-home";
 import Workflows from "@/components/workflows";

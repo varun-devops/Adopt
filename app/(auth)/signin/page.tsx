@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export const metadata = {
   title: "Sign In - Adopt Network",
@@ -6,6 +7,21 @@ export const metadata = {
 };
 
 export default function SignIn() {
+  const [queryParams, setQueryParams] = useState({
+    redirect: "",
+    error: "",
+  });
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const url = new URL(window.location.href);
+      setQueryParams({
+        redirect: url.searchParams.get("redirect") || "",
+        error: url.searchParams.get("error") || "",
+      });
+    }
+  }, []);
+
   return (
     <section>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -16,6 +32,11 @@ export default function SignIn() {
               Sign in to your account
             </h1>
           </div>
+          {queryParams.error && (
+            <div className="mb-4 text-center text-sm text-red-500">
+              Error: {queryParams.error}
+            </div>
+          )}
           <form className="mx-auto max-w-[400px]">
             <div className="space-y-5">
               <div>
@@ -34,7 +55,7 @@ export default function SignIn() {
               </div>
               <div>
                 <div className="mb-1 flex items-center justify-between gap-3">
-                  <label 
+                  <label
                     className="block text-sm font-medium text-indigo-200/65"
                     htmlFor="password"
                   >
@@ -56,22 +77,31 @@ export default function SignIn() {
               </div>
             </div>
             <div className="mt-6 space-y-5">
-              <button type="submit" className="btn w-full bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] hoverable">
+              <button
+                type="submit"
+                className="btn w-full bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] hoverable"
+              >
                 Sign in
               </button>
               <div className="flex items-center gap-3 text-center text-sm italic text-gray-600 before:h-px before:flex-1 before:bg-linear-to-r before:from-transparent before:via-gray-400/25 after:h-px after:flex-1 after:bg-linear-to-r after:from-transparent after:via-gray-400/25">
                 or
               </div>
-              <button type="button" className="btn relative w-full bg-linear-to-b from-gray-800 to-gray-800/60 bg-[length:100%_100%] bg-[bottom] text-gray-300 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-[length:100%_150%] hoverable">
+              <button
+                type="button"
+                className="btn relative w-full bg-linear-to-b from-gray-800 to-gray-800/60 bg-[length:100%_100%] bg-[bottom] text-gray-300 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-[length:100%_150%] hoverable"
+              >
                 Sign In with Google
               </button>
             </div>
           </form>
-          
+
           {/* Bottom link */}
           <div className="mt-6 text-center text-sm text-indigo-200/65">
             Don't have an account?{" "}
-            <Link className="font-medium text-indigo-500 hoverable" href="/signup">
+            <Link
+              className="font-medium text-indigo-500 hoverable"
+              href="/signup"
+            >
               Sign Up
             </Link>
           </div>
