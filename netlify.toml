@@ -12,6 +12,7 @@
   GIT_LFS_FETCH_INCLUDE = ""
   GIT_LFS_ENABLED = "false"
   GIT_SUBMODULE_FETCH = "false"
+  PNPM_FLAGS = "--no-frozen-lockfile"
 
 # Add pull request configuration
 [context.deploy-preview]
