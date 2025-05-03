@@ -75,16 +75,16 @@
   }
   @keyframes cursor-pulse {
     0% {
-      transform: scale(1);
-      opacity: 0.7;
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0.8;
     }
     50% {
-      transform: scale(1.1);
+      transform: translate(-50%, -50%) scale(1.1);
       opacity: 1;
     }
     100% {
-      transform: scale(1);
-      opacity: 0.7;
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0.8;
     }
   }
 }
@@ -158,44 +158,75 @@ html.dark {
   body {
     background-color: var(--background-color);
     color: var(--text-color);
-    cursor: none;
+    cursor: none !important; 
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   .custom-cursor {
     position: fixed;
-    width: 20px;
-    height: 20px;
+    width: 24px; /* Slightly larger */
+    height: 24px; /* Slightly larger */
     border-radius: 50%;
     background-color: var(--cursor-color);
     pointer-events: none;
-    z-index: 9999;
+    z-index: 99999; /* Ensure it's above everything */
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
     box-shadow: var(--cursor-shadow);
-    transition: width 0.2s, height 0.2s, background-color 0.3s;
-    animation: var(--animate-cursor-pulse);
+    transition: transform 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out, opacity 0.15s ease-out;
+    will-change: transform, opacity;
+    opacity: 1 !important; /* Force opacity */
+    display: block !important; /* Force display */
+    visibility: visible !important; /* Force visibility */
   }
   
   .custom-cursor-follower {
     position: fixed;
-    width: 40px;
-    height: 40px;
+    width: 48px; /* Slightly larger */
+    height: 48px; /* Slightly larger */
     border-radius: 50%;
     background-color: transparent;
-    border: 1px solid var(--cursor-color);
+    border: 2.5px solid var(--cursor-color); /* Thicker border */
     pointer-events: none;
-    z-index: 9998;
+    z-index: 99998; /* Ensure it's above everything except the main cursor */
     transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s, border-color 0.3s;
-    opacity: 0.5;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s ease-out;
+    will-change: transform, opacity;
+    opacity: 0.7 !important; /* Force opacity */
+    display: block !important; /* Force display */
+    visibility: visible !important; /* Force visibility */
   }
   
   a:hover ~ .custom-cursor,
-  button:hover ~ .custom-cursor {
+  button:hover ~ .custom-cursor,
+  .hoverable:hover ~ .custom-cursor {
     width: 30px;
     height: 30px;
     mix-blend-mode: normal;
+    opacity: 0.9 !important;
+  }
+
+  /* Remove animation to prevent potential rendering issues */
+  @media (prefers-reduced-motion: no-preference) {
+    .custom-cursor {
+      animation: simpler-cursor-pulse 3s ease-in-out infinite;
+    }
+  }
+
+  @keyframes simpler-cursor-pulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+  }
+
+  @keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  @keyframes orbit {
+    0% { transform: translate(-50%, -50%) rotate(0deg) translateX(15px) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg) translateX(15px) rotate(-360deg); }
   }
 
   *,

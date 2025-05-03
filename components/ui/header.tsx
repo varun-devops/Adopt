@@ -7,7 +7,7 @@ import MobileMenu from '../ui/mobile-menu';
 import { Transition } from '@headlessui/react';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/navigation';
-import ThemeToggle from '../theme-toggle';
+import ThemeToggle from './theme-toggle';
 import Dropdown from '../utils/dropdown';
 
 export default function Header() {

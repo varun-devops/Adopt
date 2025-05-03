@@ -1,8 +1,12 @@
-import { Inter } from 'next/font/google'
-import CustomCursor from '@/components/custom-cursor'
-import AOSWrapper from '@/app/aos'
 import './css/style.css'
-import "../styles/orbit.css";
+
+import { Inter, Architects_Daughter } from 'next/font/google'
+import { Metadata } from 'next'
+
+import AosProvider from '@/components/aos-provider'
+import CustomCursor from '@/components/custom-cursor'
+import PageTransition from '@/components/page-transition'
+import { ThemeProvider } from '@/components/theme-provider'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -10,9 +14,42 @@ const inter = Inter({
   display: 'swap'
 })
 
-export const metadata = {
+const architects_daughter = Architects_Daughter({
+  subsets: ['latin'],
+  variable: '--font-architects-daughter',
+  weight: '400',
+  display: 'swap'
+})
+
+export const metadata: Metadata = {
   title: 'Adopt Network',
-  description: 'Investment Platform for Startups and Investors',
+  description: 'Adopt Network - Connecting startups with investors',
+  icons: {
+    icon: [
+      {
+        url: '/images/logo.png',
+        href: '/images/logo.png',
+        type: 'image/png',
+        sizes: '32x32'
+      },
+      {
+        url: '/images/logo.png',
+        href: '/images/logo.png',
+        type: 'image/png',
+        sizes: '16x16'
+      }
+    ],
+    apple: {
+      url: '/images/logo.png',
+      href: '/images/logo.png',
+      type: 'image/png',
+      sizes: '180x180'
+    },
+    shortcut: {
+      url: '/images/logo.png',
+      href: '/images/logo.png'
+    }
+  }
 }
 
 export default function RootLayout({
@@ -22,14 +59,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body 
-        suppressHydrationWarning 
-        className={`${inter.variable} font-inter antialiased bg-gray-950 text-gray-200 tracking-tight`}
-      >
-        <AOSWrapper>
+      <body className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased bg-gray-900 text-gray-200 tracking-tight`}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
+            <AosProvider>
+              <PageTransition>
+                {children}
+              </PageTransition>
+            </AosProvider>
+          </div>
           <CustomCursor />
-          {children}
-        </AOSWrapper>
+        </ThemeProvider>
       </body>
     </html>
   )
