@@ -22,7 +22,7 @@ export default function PartnersPage() {
               <h2 className="mb-4 text-xl font-semibold uppercase text-indigo-500">
                 OUR PARTNERS
               </h2>
-              <h1 className="mb-6 font-nacelle text-3xl font-semibold text-gray-100 md:text-4xl">
+              <h1 className="mb-6 font-nacelle text-3xl font-semibold md:text-4xl">
                 Working Together to Create Impact
               </h1>
               <div className="mx-auto max-w-3xl">
@@ -38,9 +38,9 @@ export default function PartnersPage() {
               <div className="backdrop-blur-sm bg-gray-900/30 rounded-2xl border border-gray-700/50 p-8 shadow-xl transition-transform hover:scale-[1.02]">
                 <div className="mb-4 h-16 flex items-center">
                   <div className="h-12 w-12 bg-gradient-to-r from-red-500/20 to-indigo-600/20 rounded-md flex items-center justify-center">
-                    <span className="text-2xl font-bold text-white">P1</span>
+                    <span className="text-2xl font-bold  ">P1</span>
                   </div>
-                  <h3 className="ml-4 text-xl font-semibold text-white">Venture Capital Firm</h3>
+                  <h3 className="ml-4 text-xl font-semibold  ">Venture Capital Firm</h3>
                 </div>
                 <p className="text-gray-400 mb-4">A leading venture capital firm specializing in early-stage investments in technology startups.</p>
                 <a href="#0" className="text-indigo-500 font-semibold inline-flex items-center group">
@@ -53,9 +53,9 @@ export default function PartnersPage() {
               <div className="backdrop-blur-sm bg-gray-900/30 rounded-2xl border border-gray-700/50 p-8 shadow-xl transition-transform hover:scale-[1.02]">
                 <div className="mb-4 h-16 flex items-center">
                   <div className="h-12 w-12 bg-gradient-to-r from-red-500/20 to-indigo-600/20 rounded-md flex items-center justify-center">
-                    <span className="text-2xl font-bold text-white">P2</span>
+                    <span className="text-2xl font-bold  ">P2</span>
                   </div>
-                  <h3 className="ml-4 text-xl font-semibold text-white">Tech Accelerator</h3>
+                  <h3 className="ml-4 text-xl font-semibold  ">Tech Accelerator</h3>
                 </div>
                 <p className="text-gray-400 mb-4">An accelerator program helping tech startups scale through mentorship, resources, and funding opportunities.</p>
                 <a href="#0" className="text-indigo-500 font-semibold inline-flex items-center group">
@@ -68,9 +68,9 @@ export default function PartnersPage() {
               <div className="backdrop-blur-sm bg-gray-900/30 rounded-2xl border border-gray-700/50 p-8 shadow-xl transition-transform hover:scale-[1.02]">
                 <div className="mb-4 h-16 flex items-center">
                   <div className="h-12 w-12 bg-gradient-to-r from-red-500/20 to-indigo-600/20 rounded-md flex items-center justify-center">
-                    <span className="text-2xl font-bold text-white">P3</span>
+                    <span className="text-2xl font-bold  ">P3</span>
                   </div>
-                  <h3 className="ml-4 text-xl font-semibold text-white">Business Consultancy</h3>
+                  <h3 className="ml-4 text-xl font-semibold  ">Business Consultancy</h3>
                 </div>
                 <p className="text-gray-400 mb-4">A consultancy firm providing expert business advice and strategic guidance to growing companies.</p>
                 <a href="#0" className="text-indigo-500 font-semibold inline-flex items-center group">
@@ -86,20 +86,20 @@ export default function PartnersPage() {
                 <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-gradient-to-br from-red-500/20 to-purple-500/20 blur-3xl -z-10" />
                 <div className="absolute -left-20 -bottom-20 h-64 w-64 rounded-full bg-gradient-to-br from-indigo-600/20 to-blue-500/20 blur-3xl -z-10" />
                 
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Interested in becoming our partner?</h2>
+                <h2 className="text-3xl md:text-4xl font-bold   mb-6">Interested in becoming our partner?</h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                   Join our network of industry leaders and contribute to the growth of innovative startups.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <a
                     href="#0"
-                    className="btn bg-gradient-to-r from-red-500 to-indigo-600 text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="btn bg-gradient-to-r from-red-500 to-indigo-600   px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                   >
                     Become A Partner
                   </a>
                   <a
                     href="#0"
-                    className="btn bg-transparent border border-gray-500 text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-xl hover:border-white transition-all duration-300"
+                    className="btn bg-transparent border border-gray-500   px-8 py-3 rounded-lg shadow-lg hover:shadow-xl hover:border-white transition-all duration-300"
                   >
                     Contact Us
                   </a>

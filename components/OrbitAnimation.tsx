@@ -18,7 +18,7 @@ const OrbitAnimation = () => {
       <div className="orbit orbit1">
         <div className="avatar">
           <div className="avatar-container">
-            <span className="text-xs font-bold text-white">01</span>
+            <span className="text-xs font-bold  ">01</span>
           </div>
         </div>
       </div>
@@ -28,7 +28,7 @@ const OrbitAnimation = () => {
       <div className="orbit orbit2">
         <div className="avatar">
           <div className="avatar-container">
-            <span className="text-xs font-bold text-white">02</span>
+            <span className="text-xs font-bold  ">02</span>
           </div>
         </div>
       </div>
@@ -38,7 +38,7 @@ const OrbitAnimation = () => {
       <div className="orbit orbit3">
         <div className="avatar">
           <div className="avatar-container">
-            <span className="text-xs font-bold text-white">03</span>
+            <span className="text-xs font-bold  ">03</span>
           </div>
         </div>
       </div>
@@ -48,7 +48,7 @@ const OrbitAnimation = () => {
       <div className="orbit orbit4">
         <div className="avatar">
           <div className="avatar-container">
-            <span className="text-xs font-bold text-white">04</span>
+            <span className="text-xs font-bold  ">04</span>
           </div>
         </div>
       </div>

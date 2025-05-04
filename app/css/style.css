@@ -3,6 +3,7 @@
 /* Additional styles */
 @import './additional-styles/utility-patterns.css' layer(components);
 @import './additional-styles/theme.css';
+@import '../../styles/orbit.css'; /* Import orbit styles */
 
 @plugin "@tailwindcss/forms" {
   strategy: base;
@@ -162,6 +163,17 @@ html.dark {
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   
+  /* Theme-specific element styles */
+  html:not(.dark) h1.mb-6.font-nacelle.text-4xl.font-semibold.text-gray-100.md\:text-5xl {
+    color: var(--color-black);
+  }
+  
+ 
+
+  html.dark .text-gray-100 {
+    color: var(--color-gray-100);
+  }
+  
   .custom-cursor {
     position: fixed;
     width: 24px; /* Slightly larger */
@@ -236,4 +248,184 @@ html.dark {
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
+}
+
+/* Galaxy Universe Styling */
+.galaxy-bg {
+  background: radial-gradient(ellipse at center, #111827 0%, #0F172A 100%);
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), 
+    radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px, 100px 100px;
+  background-position: 0 0, 25px 25px;
+  overflow: hidden;
+}
+
+.stars-small circle {
+  animation: twinkle-small 4s ease-in-out infinite;
+}
+
+.stars-medium circle {
+  animation: twinkle-medium 6s ease-in-out infinite;
+}
+
+@keyframes twinkle-small {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes twinkle-medium {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.9; }
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.1; }
+}
+
+.svg-container {
+  position: relative;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  overflow: hidden;
+}
+
+/* Twinkling Stars animation */
+.stars-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+
+
+.stars {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: twinkle 4s ease-in-out infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.3;
+}
+
+.stars2 {
+  background-image: 
+    radial-gradient(1px 1px at 100px 150px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 200px 220px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 300px 300px, #eee, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 400px 250px, #fff, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 400px 400px;
+  animation: twinkle 6s ease-in-out infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.3;
+}
+
+.stars3 {
+  background-image: 
+    radial-gradient(1px 1px at 50px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 150px 180px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 250px 280px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 350px 380px, #eee, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  animation: twinkle 8s ease-in-out infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.3;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+  100% { opacity: 0.3; }
+}
+
+/* Gradient Border and Button Styles */
+.gradient-border {
+  background: transparent;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  z-index: 1;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: inherit;
+  background: linear-gradient(to right bottom, var(--color-indigo-500), var(--color-red-500));
+}
+
+.btn-gradient {
+  background: transparent;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  color: white;
+  z-index: 1;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.btn-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: inherit;
+  background: linear-gradient(to right bottom, var(--color-indigo-500), var(--color-red-500));
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+
+.btn-gradient::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  background: linear-gradient(to right bottom, var(--color-indigo-500), var(--color-red-500));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-gradient:hover::before {
+  opacity: 0;
+}
+
+.btn-gradient:hover::after {
+  opacity: 1;
 }

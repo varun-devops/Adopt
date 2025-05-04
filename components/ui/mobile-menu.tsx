@@ -101,7 +101,7 @@ export default function MobileMenu() {
                 <li>
                   <Link
                     href="/startup"
-                    className="flex items-center py-1 text-gray-400 hover:text-white"
+                    className="flex items-center py-1 text-gray-400 hover: "
                     onClick={() => setMobileNavOpen(false)}
                   >
                     For Startups
@@ -110,7 +110,7 @@ export default function MobileMenu() {
                 <li>
                   <Link
                     href="/funding"
-                    className="flex items-center py-1 text-gray-400 hover:text-white"
+                    className="flex items-center py-1 text-gray-400 hover: "
                     onClick={() => setMobileNavOpen(false)}
                   >
                     Get Funding
@@ -119,7 +119,7 @@ export default function MobileMenu() {
                 <li>
                   <Link
                     href="/mentorship"
-                    className="flex items-center py-1 text-gray-400 hover:text-white"
+                    className="flex items-center py-1 text-gray-400 hover: "
                     onClick={() => setMobileNavOpen(false)}
                   >
                     Mentorship
@@ -130,7 +130,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="/investors"
-                className="flex items-center py-2 text-gray-300 hover:text-white"
+                className="flex items-center py-2 text-gray-300 hover: "
                 onClick={() => setMobileNavOpen(false)}
               >
                 Investors
@@ -151,7 +151,7 @@ export default function MobileMenu() {
                 <li>
                   <Link
                     href="/portfolio"
-                    className="flex items-center py-1 text-gray-400 hover:text-white"
+                    className="flex items-center py-1 text-gray-400 hover: "
                     onClick={() => setMobileNavOpen(false)}
                   >
                     Portfolio
@@ -160,7 +160,7 @@ export default function MobileMenu() {
                 <li>
                   <Link
                     href="/partners"
-                    className="flex items-center py-1 text-gray-400 hover:text-white"
+                    className="flex items-center py-1 text-gray-400 hover: "
                     onClick={() => setMobileNavOpen(false)}
                   >
                     Partners
@@ -169,7 +169,7 @@ export default function MobileMenu() {
                 <li>
                   <Link
                     href="/about"
-                    className="flex items-center py-1 text-gray-400 hover:text-white"
+                    className="flex items-center py-1 text-gray-400 hover: "
                     onClick={() => setMobileNavOpen(false)}
                   >
                     About Us
@@ -180,7 +180,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="/contact"
-                className="flex items-center py-2 text-gray-300 hover:text-white"
+                className="flex items-center py-2 text-gray-300 hover: "
                 onClick={() => setMobileNavOpen(false)}
               >
                 Contact Us
@@ -189,7 +189,7 @@ export default function MobileMenu() {
             <li className="py-2 my-2 border-t border-gray-700 flex justify-between items-center">
               <Link
                 href="/signin"
-                className="flex items-center py-2 text-gray-300 hover:text-white"
+                className="flex items-center py-2 text-gray-300 hover: "
                 onClick={() => setMobileNavOpen(false)}
               >
                 Sign in
@@ -199,7 +199,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="/signin"
-                className="flex items-center py-2 text-gray-300 hover:text-white"
+                className="flex items-center py-2 text-gray-300 hover: "
                 onClick={() => setMobileNavOpen(false)}
               >
                 Sign in

@@ -46,7 +46,7 @@ export default function StartupPage() {
               <h2 className="mb-4 text-xl font-semibold uppercase text-indigo-500">
                 GET TO KNOW THE PROCESS
               </h2>
-              <h1 className="mb-6 font-nacelle text-4xl font-semibold text-gray-100 md:text-5xl">
+              <h1 className="mb-6 font-nacelle text-4xl font-semibold md:text-5xl">
                 STARTUP INVESTMENT
               </h1>
               <p className="mb-8 text-lg text-gray-400">
@@ -57,12 +57,12 @@ export default function StartupPage() {
               </p>
               <div className="mt-2">
                 <a
-                  className="btn group bg-linear-to-t from-indigo-600 to-red-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] sm:w-auto"
+                  className="btn group bg-linear-to-t from-indigo-600 to-red-500 bg-[length:100%_100%] bg-[bottom]   shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] sm:w-auto"
                   href="#0"
                 >
                   <span className="relative inline-flex items-center">
                     Apply For Funding
-                    <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
+                    <span className="ml-1 tracking-normal  /50 transition-transform group-hover:translate-x-0.5">
                       -&gt;
                     </span>
                   </span>
@@ -74,11 +74,18 @@ export default function StartupPage() {
             <div className="flex items-center justify-center" data-aos="fade-left">
               <div className="relative">
                 <div className="absolute -right-6 -top-6 h-64 w-64 rounded-full bg-gradient-to-br from-indigo-600/30 to-red-500/20 blur-3xl" />
-                <div className="relative z-10 backdrop-blur-sm bg-gray-900/30 p-6 rounded-2xl border border-gray-700/50 shadow-2xl">
+                <div className="relative z-10">
                   <img
-                    src="/images/startup-investment.svg"
+                    src="/img/startup-investment.svg"
                     alt="Startup Investment Process"
-                    className="max-w-full h-auto"
+                    className="w-full h-auto max-w-md mx-auto"
+                    style={{ minHeight: "410px" }}
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.onerror = null;
+                      target.src = "/images/logo.png"; 
+                      console.error("Failed to load startup investment SVG");
+                    }}
                   />
                 </div>
               </div>
@@ -90,7 +97,7 @@ export default function StartupPage() {
             <h2 className="mb-4 text-xl font-semibold uppercase text-indigo-500">
               WHAT WE SERVE
             </h2>
-            <h1 className="mb-6 font-nacelle text-3xl font-semibold text-gray-100 md:text-4xl">
+            <h1 className="mb-6 font-nacelle text-3xl font-semibold md:text-4xl">
               We are committed to making Startup<br />investments more inclusive
             </h1>
             <div className="mx-auto max-w-3xl">
@@ -111,7 +118,7 @@ export default function StartupPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-white">Funding Support</h3>
+              <h3 className="mb-3 text-xl font-semibold  ">Funding Support</h3>
               <p className="text-gray-400">Access to early-stage investment capital from 50k USD to 1MN USD tailored to your startup's needs.</p>
             </div>
 
@@ -122,7 +129,7 @@ export default function StartupPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
                 </svg>
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-white">Mentorship Network</h3>
+              <h3 className="mb-3 text-xl font-semibold  ">Mentorship Network</h3>
               <p className="text-gray-400">Connect with our extensive network of experienced mentors who can guide your startup journey.</p>
             </div>
 
@@ -133,7 +140,7 @@ export default function StartupPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
                 </svg>
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-white">Growth Resources</h3>
+              <h3 className="mb-3 text-xl font-semibold  ">Growth Resources</h3>
               <p className="text-gray-400">Strategic resources and partnerships to accelerate your startup's growth and market presence.</p>
             </div>
           </div>
@@ -144,10 +151,10 @@ export default function StartupPage() {
               <h2 className="mb-4 text-xl font-semibold uppercase text-indigo-500">
                 STEPS TO INVEST
               </h2>
-              <h1 className="mb-6 font-nacelle text-3xl font-semibold text-gray-100 md:text-4xl">
+              <h1 className="mb-6 font-nacelle text-3xl font-semibold  md:text-4xl">
                 Invest with <span className="text-red-500">Adopt</span> Network
               </h1>
-              <h3 className="mb-10 text-2xl font-medium text-gray-100">
+              <h3 className="mb-10 text-2xl font-medium ">
                 It's really simple with us
               </h3>
               <p className="mx-auto max-w-3xl text-center text-lg text-gray-400">
@@ -172,7 +179,7 @@ export default function StartupPage() {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-900/70 to-purple-900/70 animate-pulse"></div>
                   <div className="absolute inset-0 rounded-full border-2 border-red-500/50 animate-ping-slow opacity-40"></div>
                   <div className="absolute inset-0 rounded-full border-2 border-indigo-600/50 animate-spin-slow opacity-40"></div>
-                  <div className="relative z-10 text-white text-center font-bold text-xs">
+                  <div className="relative z-10   text-center font-bold text-xs">
                     <div className="glow-text">ADOPT</div>
                     <div className="text-[8px]">HQ</div>
                   </div>
@@ -472,7 +479,7 @@ export default function StartupPage() {
                     </div>
                     <div className="space-step-label">
                       <div className="text-xs text-indigo-400 font-semibold">STEP {item.step}</div>
-                      <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                      <h3 className="text-xl font-bold  ">{item.title}</h3>
                     </div>
                   </div>
                   <p className="text-gray-400 ml-16">{item.desc}</p>
@@ -484,7 +491,7 @@ export default function StartupPage() {
             <div className="mt-24 text-center">
               <a
                 href="#0"
-                className="btn inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-500 to-indigo-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                className="btn inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-500 to-indigo-600   font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <span>Apply For Funding</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">

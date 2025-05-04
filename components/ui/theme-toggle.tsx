@@ -9,12 +9,23 @@ export default function ThemeToggle() {
 
   // Ensure component is mounted to avoid hydration mismatch
   useEffect(() => setMounted(true), [])
+  useEffect(() => {
+    const isDark = localStorage.getItem('theme') === 'dark' || 
+      (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+    setTheme(isDark ? 'dark' : 'light');
+    document.documentElement.classList.toggle('dark', isDark);
+  }, []);
   if (!mounted) return null
 
   return (
     <button
       className="relative inline-flex h-8 w-16 items-center rounded-full border-2 border-gray-300 dark:border-gray-600 p-1 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors duration-200 bg-gray-100 dark:bg-gray-800"
-      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+      onClick={() => {
+        const newTheme = resolvedTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+        document.documentElement.classList.toggle('dark', newTheme === 'dark');
+      }}
       aria-label={`Switch to ${resolvedTheme === 'dark' ? 'light' : 'dark'} mode`}
     >
       {/* Sun icon (light mode) */}

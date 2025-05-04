@@ -152,31 +152,35 @@ export default function PortfolioPage() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Hero content */}
         <div className="py-12 md:py-20">
-          {/* Portfolio Top Section */}
-          <div className="text-center" data-aos="fade-up">
-            <h2 className="mb-4 text-xl font-semibold uppercase text-indigo-500">
-              POWERFUL COLLABORATIONS
-            </h2>
-            <h1 className="mb-6 font-nacelle text-3xl font-semibold text-gray-100 md:text-5xl">
-              ADOPT PORTFOLIO
-            </h1>
-            <div className="mx-auto max-w-3xl">
-              <p className="mb-10 text-center text-lg text-gray-400">
-                Collaboration comes with power! Adopt network takes pride in collaborating with over 85+ companies 
-                and completing 10000+ startup evaluations. Adopt's global presence helps businesses establish 
-                themselves in the global market.
-              </p>
+          {/* Portfolio Top Section and Center illustration container */}
+          <div className="flex flex-wrap items-center justify-between mb-16" data-aos="fade-up">
+            {/* Portfolio Top Section */}
+            <div className="w-full lg:w-1/2 lg:pr-8 mb-10 lg:mb-0">
+              <h2 className="mb-4 text-xl font-semibold uppercase text-indigo-500">
+                POWERFUL COLLABORATIONS
+              </h2>
+              <h1 className="mb-6 font-nacelle text-3xl font-semibold  md:text-5xl">
+                ADOPT PORTFOLIO
+              </h1>
+              <div className="max-w-3xl">
+                <p className="mb-6 text-lg text-gray-400">
+                  Collaboration comes with power! Adopt network takes pride in collaborating with over 85+ companies 
+                  and completing 10000+ startup evaluations. Adopt's global presence helps businesses establish 
+                  themselves in the global market.
+                </p>
+              </div>
             </div>
             
             {/* Center illustration */}
-            <div className="flex justify-center mb-16" data-aos="zoom-in" data-aos-delay="300">
+            <div className="w-full lg:w-1/2 flex justify-center" data-aos="zoom-in" data-aos-delay="300">
               <div className="relative">
-                <div className="absolute -top-10 left-1/2 w-80 h-80 bg-indigo-600/20 rounded-full blur-3xl transform -translate-x-1/2"></div>
-                <div className="relative z-10 backdrop-blur-sm bg-gray-900/30 p-8 rounded-2xl border border-gray-700/50 shadow-2xl">
+                <div className="absolute -top-10 left-1/2 w-80 h-80"></div>
+                <div className="relative z-10">
                   <img
-                    src="/images/universe-portfolio.svg" 
+                    src="/img/port-data.svg" 
                     alt="Portfolio Universe"
                     className="max-w-full h-auto"
+                    style={{ minHeight: "410px" }}
                   />
                 </div>
               </div>
@@ -195,11 +199,11 @@ export default function PortfolioPage() {
               <div className="absolute -right-6 -top-6 h-40 w-40 rounded-full bg-gradient-to-br from-indigo-600/30 to-indigo-500/20 blur-3xl"></div>
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-r from-red-500/20 to-indigo-600/20 p-4 shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-8 w-8 text-indigo-500">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125-1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
                 </svg>
               </div>
               <div>
-                <span className="relative inline-flex text-4xl font-extrabold text-white">
+                <span className="relative inline-flex text-4xl font-extrabold  ">
                   {countedUp ? <CountUpAnimation end={10} duration={2000} /> : "0"}
                   <span>%</span>
                 </span>
@@ -216,7 +220,7 @@ export default function PortfolioPage() {
                 </svg>
               </div>
               <div>
-                <span className="relative inline-flex text-4xl font-extrabold text-white">
+                <span className="relative inline-flex text-4xl font-extrabold  ">
                   {countedUp ? <CountUpAnimation end={20} duration={2000} /> : "0"}
                   <span>%</span>
                 </span>
@@ -233,7 +237,7 @@ export default function PortfolioPage() {
                 </svg>
               </div>
               <div>
-                <span className="relative inline-flex text-4xl font-extrabold text-white">
+                <span className="relative inline-flex text-4xl font-extrabold  ">
                   {countedUp ? <CountUpAnimation end={30} duration={2000} /> : "0"}
                   <span>%</span>
                 </span>
@@ -248,7 +252,7 @@ export default function PortfolioPage() {
               <h2 className="mb-4 text-xl font-semibold uppercase text-red-500">
                 OUR PORTFOLIO
               </h2>
-              <h1 className="mb-6 font-nacelle text-3xl font-semibold text-gray-100 md:text-4xl">
+              <h1 className="mb-6 font-nacelle text-3xl font-semibold  md:text-4xl">
                 Companies We've Invested In
               </h1>
               <p className="mx-auto max-w-3xl text-center text-lg text-gray-400">
@@ -272,7 +276,7 @@ export default function PortfolioPage() {
                       className="h-16 w-16 object-contain"
                     />
                   </div>
-                  <h3 className="mb-2 text-xl font-semibold text-white">{company.name}</h3>
+                  <h3 className="mb-2 text-xl font-semibold  ">{company.name}</h3>
                   <p className="mb-4 text-indigo-400">{company.category}</p>
                   <div className="flex justify-between text-sm text-gray-400">
                     <span>{company.funding}</span>
@@ -286,7 +290,7 @@ export default function PortfolioPage() {
             <div className="mt-16 text-center">
               <a
                 href="#0"
-                className="btn inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-500 to-indigo-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                className="btn inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-500 to-indigo-600   font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <span>View All Portfolio</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
@@ -298,13 +302,14 @@ export default function PortfolioPage() {
             {/* Bottom illustration */}
             <div className="mt-24 flex justify-center">
               <div className="relative max-w-2xl">
-                <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-gradient-to-br from-red-500/20 to-indigo-600/20 blur-3xl" />
-                <div className="absolute -left-10 -bottom-10 h-40 w-40 rounded-full bg-gradient-to-br from-indigo-600/20 to-red-500/20 blur-3xl" />
-                <div className="backdrop-blur-sm bg-gray-900/30 p-6 rounded-2xl border border-gray-700/50 shadow-2xl">
+                <div className="absolute -right-10 -top-10 h-40 w-40" />
+                <div className="absolute -left-10 -bottom-10 h-40 w-40 " />
+                <div className="backdrop-blur-sm ">
                   <img
-                    src="/images/universe-connection.svg"
+                    src="/img/launch.svg"
                     alt="Universe Connection"
                     className="relative z-10 max-w-full h-auto"
+                    style={{ minHeight: "230px" }}
                   />
                 </div>
               </div>

@@ -30,7 +30,7 @@ export default function FundingPage() {
               <h2 className="mb-4 text-xl font-semibold uppercase text-indigo-500">
                 STARTUP FUNDING
               </h2>
-              <h1 className="mb-6 font-nacelle text-4xl font-semibold text-gray-100 md:text-5xl">
+              <h1 className="mb-6 font-nacelle text-4xl font-semibold  md:text-5xl">
                 Funding for <span className="text-red-500">Innovators</span><br />
                 Fuel Your Startup's Growth
               </h1>
@@ -42,12 +42,12 @@ export default function FundingPage() {
               </p>
               <div className="mt-2">
                 <a
-                  className="btn group bg-linear-to-t from-indigo-600 to-red-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] sm:w-auto"
+                  className="btn group bg-linear-to-t from-indigo-600 to-red-500 bg-[length:100%_100%] bg-[bottom]   shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] sm:w-auto"
                   href="#0"
                 >
                   <span className="relative inline-flex items-center">
                     Apply For Funding
-                    <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
+                    <span className="ml-1 tracking-normal  /50 transition-transform group-hover:translate-x-0.5">
                       -&gt;
                     </span>
                   </span>
@@ -59,11 +59,12 @@ export default function FundingPage() {
             <div className="flex items-center justify-center" data-aos="fade-left">
               <div className="relative">
                 <div className="absolute -right-6 -top-6 h-80 w-80 rounded-full bg-gradient-to-br from-red-500/30 to-indigo-600/20 blur-3xl" />
-                <div className="relative z-10 backdrop-blur-sm bg-gray-900/30 p-6 rounded-2xl border border-gray-700/50 shadow-2xl">
+                <div className="relative z-10">
                   <img
-                    src="/images/funding-illustration.svg" 
+                    src="/img/funding.svg" 
                     alt="Startup Funding"
                     className="max-w-full h-auto"
+                    style={{ minHeight: "410px" }}
                   />
                 </div>
               </div>
@@ -76,10 +77,10 @@ export default function FundingPage() {
               <h2 className="mb-4 text-xl font-semibold uppercase text-indigo-500">
                 STEPS TO INVEST
               </h2>
-              <h1 className="mb-6 font-nacelle text-3xl font-semibold text-gray-100 md:text-4xl">
+              <h1 className="mb-6 font-nacelle text-3xl font-semibold  md:text-4xl">
                 Invest with <span className="text-red-500">Adopt</span> Network
               </h1>
-              <h3 className="mb-10 text-2xl font-medium text-gray-100">
+              <h3 className="mb-10 text-2xl font-medium ">
                 It's really simple with us
               </h3>
               <p className="mx-auto max-w-3xl text-center text-lg text-gray-400">
@@ -105,7 +106,7 @@ export default function FundingPage() {
                       <circle cx="50" cy="50" r="5" fill="#e5e7eb" />
                       <circle cx="50" cy="50" r="30" fill="none" stroke="#6366f1" strokeWidth="1" strokeDasharray="2 2" />
                     </svg>
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center font-bold">
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2   text-center font-bold">
                       <span className="text-xs md:text-base">ADOPT</span>
                     </div>
                   </div>
@@ -134,8 +135,8 @@ export default function FundingPage() {
                      animation: 'orbit1 40s linear infinite'
                    }}>
                 <div className="relative backdrop-blur-sm bg-gray-900/40 p-4 rounded-xl border border-gray-700/50 shadow-xl max-w-xs transform -translate-x-1/2">
-                  <div className="absolute -top-6 -left-6 h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-indigo-600 text-white font-bold shadow-lg z-10">1</div>
-                  <h3 className="text-lg font-bold text-white mb-2 mt-4">APPLY</h3>
+                  <div className="absolute -top-6 -left-6 h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-indigo-600   font-bold shadow-lg z-10">1</div>
+                  <h3 className="text-lg font-bold   mb-2 mt-4">APPLY</h3>
                   <p className="text-gray-400 text-sm">Startup can send their updated pitch at deals@Adopt.com</p>
                 </div>
               </div>
@@ -149,8 +150,8 @@ export default function FundingPage() {
                      animation: 'orbit2 45s linear infinite'
                    }}>
                 <div className="relative backdrop-blur-sm bg-gray-900/40 p-4 rounded-xl border border-gray-700/50 shadow-xl max-w-xs transform -translate-x-1/2">
-                  <div className="absolute -top-6 -left-6 h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-indigo-600 text-white font-bold shadow-lg z-10">2</div>
-                  <h3 className="text-lg font-bold text-white mb-2 mt-4">EVALUATE</h3>
+                  <div className="absolute -top-6 -left-6 h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-indigo-600   font-bold shadow-lg z-10">2</div>
+                  <h3 className="text-lg font-bold   mb-2 mt-4">EVALUATE</h3>
                   <p className="text-gray-400 text-sm">Startup can expect a reply within 1-2 weeks once the deal has been evaluated.</p>
                 </div>
               </div>
@@ -164,8 +165,8 @@ export default function FundingPage() {
                      animation: 'orbit3 50s linear infinite'
                    }}>
                 <div className="relative backdrop-blur-sm bg-gray-900/40 p-4 rounded-xl border border-gray-700/50 shadow-xl max-w-xs transform -translate-x-1/2">
-                  <div className="absolute -top-6 -left-6 h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-indigo-600 text-white font-bold shadow-lg z-10">3</div>
-                  <h3 className="text-lg font-bold text-white mb-2 mt-4">SCREENING</h3>
+                  <div className="absolute -top-6 -left-6 h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-indigo-600   font-bold shadow-lg z-10">3</div>
+                  <h3 className="text-lg font-bold   mb-2 mt-4">SCREENING</h3>
                   <p className="text-gray-400 text-sm">Shortlisted startups gets further notified for a meeting/call with the team & hence the shortlisting happens.</p>
                 </div>
               </div>
@@ -179,8 +180,8 @@ export default function FundingPage() {
                      animation: 'orbit4 55s linear infinite'
                    }}>
                 <div className="relative backdrop-blur-sm bg-gray-900/40 p-4 rounded-xl border border-gray-700/50 shadow-xl max-w-xs transform -translate-x-1/2">
-                  <div className="absolute -top-6 -left-6 h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-indigo-600 text-white font-bold shadow-lg z-10">4</div>
-                  <h3 className="text-lg font-bold text-white mb-2 mt-4">ENGAGE & PITCH</h3>
+                  <div className="absolute -top-6 -left-6 h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-indigo-600   font-bold shadow-lg z-10">4</div>
+                  <h3 className="text-lg font-bold   mb-2 mt-4">ENGAGE & PITCH</h3>
                   <p className="text-gray-400 text-sm">An investment director is assigned followed by signing of the mandate. After approval from the investment committee, startup present at a monthly pitching session.</p>
                 </div>
               </div>
@@ -194,8 +195,8 @@ export default function FundingPage() {
                      animation: 'orbit5 60s linear infinite'
                    }}>
                 <div className="relative backdrop-blur-sm bg-gray-900/40 p-4 rounded-xl border border-gray-700/50 shadow-xl max-w-xs transform -translate-x-1/2">
-                  <div className="absolute -top-6 -left-6 h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-indigo-600 text-white font-bold shadow-lg z-10">5</div>
-                  <h3 className="text-lg font-bold text-white mb-2 mt-4">TERM SHEET & DUE DILIGENCE</h3>
+                  <div className="absolute -top-6 -left-6 h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-indigo-600   font-bold shadow-lg z-10">5</div>
+                  <h3 className="text-lg font-bold   mb-2 mt-4">TERM SHEET & DUE DILIGENCE</h3>
                   <p className="text-gray-400 text-sm">Call/Meeting are scheduled with the interested investors to finalize the term sheet. A comprehensive due diligence process takes places for roughly 2-4 weeks.</p>
                 </div>
               </div>
@@ -209,8 +210,8 @@ export default function FundingPage() {
                      animation: 'orbit6 65s linear infinite'
                    }}>
                 <div className="relative backdrop-blur-sm bg-gray-900/40 p-4 rounded-xl border border-gray-700/50 shadow-xl max-w-xs transform -translate-x-1/2">
-                  <div className="absolute -top-6 -left-6 h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-indigo-600 text-white font-bold shadow-lg z-10">6</div>
-                  <h3 className="text-lg font-bold text-white mb-2 mt-4">DEAL</h3>
+                  <div className="absolute -top-6 -left-6 h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-indigo-600   font-bold shadow-lg z-10">6</div>
+                  <h3 className="text-lg font-bold   mb-2 mt-4">DEAL</h3>
                   <p className="text-gray-400 text-sm">The SSIM document would be signed and an action to call for money gets initiated. The whole process takes 30-60 days.</p>
                 </div>
               </div>
@@ -229,12 +230,12 @@ export default function FundingPage() {
                 ].map((step, index) => (
                   <div key={index} className="flex">
                     <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-indigo-600 text-white font-bold shadow-lg z-10">
+                      <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-indigo-600   font-bold shadow-lg z-10">
                         {step.num}
                       </div>
                     </div>
                     <div className="ml-8">
-                      <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
+                      <h3 className="text-xl font-bold   mb-2">{step.title}</h3>
                       <p className="text-gray-400">{step.desc}</p>
                     </div>
                   </div>
@@ -246,7 +247,7 @@ export default function FundingPage() {
             <div className="mt-20 text-center">
               <a
                 href="#0"
-                className="btn bg-gradient-to-r from-red-500 to-indigo-600 text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                className="btn bg-gradient-to-r from-red-500 to-indigo-600   px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Apply For Funding
               </a>

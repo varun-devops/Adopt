@@ -8,15 +8,15 @@ export default function ThemeToggle() {
   // Initialize theme based on user preference or system preference
   useEffect(() => {
     const isDark = localStorage.getItem('theme') === 'dark' || 
-      (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    
-    setDarkMode(isDark)
+      (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+    setDarkMode(isDark);
     if (isDark) {
-      document.documentElement.classList.add('dark')
+      document.documentElement.classList.add('dark');
     } else {
-      document.documentElement.classList.remove('dark')
+      document.documentElement.classList.remove('dark');
     }
-  }, [])
+  }, []);
 
   // Toggle theme function
   const toggleTheme = () => {
