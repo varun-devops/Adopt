@@ -36,7 +36,7 @@ export default function Dropdown({ title, children }: DropdownProps) {
   return (
     <div className="relative" ref={dropdown}>
       <button
-        className="text-gray-300 hover:text-white px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
+        className="text-gray-300 hover:  px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
         aria-haspopup="true"
         onClick={() => setDropdownOpen(!dropdownOpen)}
         aria-expanded={dropdownOpen}

@@ -167,7 +167,7 @@ export default function AboutPage() {
             <h2 className="mb-4 text-xl font-semibold uppercase text-indigo-500">
               WHO WE ARE
             </h2>
-            <h1 className="mb-6 font-nacelle text-3xl font-semibold text-gray-100 md:text-5xl">
+            <h1 className="mb-6 font-nacelle text-3xl font-semibold  md:text-5xl">
               THE FUTURE OF PRIVATE INVESTING
             </h1>
             <div className="mx-auto max-w-3xl">
@@ -182,12 +182,13 @@ export default function AboutPage() {
             {/* Center illustration */}
             <div className="flex justify-center mb-16" data-aos="zoom-in" data-aos-delay="300">
               <div className="relative">
-                <div className="absolute -top-10 left-1/2 w-80 h-80 bg-indigo-600/20 rounded-full blur-3xl transform -translate-x-1/2"></div>
-                <div className="relative z-10 backdrop-blur-sm bg-gray-900/30 p-8 rounded-2xl border border-gray-700/50 shadow-2xl">
+                <div className="absolute -top-10 left-1/2 w-80 h-80"></div>
+                <div className="relative z-10">
                   <img
-                    src="/images/universe-investment.svg" 
+                    src="/img/about.svg" 
                     alt="Investment Universe"
                     className="max-w-full h-auto"
+                    style={{ minHeight: "320px" }}
                   />
                 </div>
               </div>
@@ -210,7 +211,7 @@ export default function AboutPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white">Stages</h3>
+                <h3 className="text-xl font-semibold  ">Stages</h3>
               </div>
               <p className="text-gray-400">Seed to Pre Series A</p>
             </div>
@@ -224,7 +225,7 @@ export default function AboutPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white">Ticket size</h3>
+                <h3 className="text-xl font-semibold  ">Ticket size</h3>
               </div>
               <p className="text-gray-400">USD 50k to USD 500k</p>
             </div>
@@ -238,7 +239,7 @@ export default function AboutPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white">Min. Cheque size</h3>
+                <h3 className="text-xl font-semibold  ">Min. Cheque size</h3>
               </div>
               <p className="text-gray-400">USD 7k per investor</p>
             </div>
@@ -252,7 +253,7 @@ export default function AboutPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white">Network</h3>
+                <h3 className="text-xl font-semibold  ">Network</h3>
               </div>
               <p className="text-gray-400">2000+ investors (Angels/HNI'S/VC'S)</p>
             </div>
@@ -266,7 +267,7 @@ export default function AboutPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white">Investor Presence</h3>
+                <h3 className="text-xl font-semibold  ">Investor Presence</h3>
               </div>
               <p className="text-gray-400">India, Singapore, Dubai, USA, UK & Canada</p>
             </div>
@@ -278,7 +279,7 @@ export default function AboutPage() {
               <h2 className="mb-4 text-xl font-semibold uppercase text-indigo-500">
                 OUR TEAM
               </h2>
-              <h1 className="mb-6 font-nacelle text-3xl font-semibold text-gray-100 md:text-4xl">
+              <h1 className="mb-6 font-nacelle text-3xl font-semibold md:text-4xl">
                 The amazing team behind <span className="text-red-500">ADOPT</span>
               </h1>
               <p className="mx-auto max-w-3xl text-center text-lg text-gray-400">
@@ -309,13 +310,13 @@ export default function AboutPage() {
                       rel="noopener noreferrer" 
                       className="absolute top-4 right-4 bg-blue-600 p-2 rounded-full hover:bg-blue-700 transition-colors"
                     >
-                      <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <svg className="w-5 h-5  " fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
                       </svg>
                     </a>
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-white">{member.name}</h3>
+                    <h3 className="text-xl font-bold  ">{member.name}</h3>
                     <p className="text-indigo-400 mb-4">{member.position}</p>
                     <p className="text-gray-400 text-sm leading-relaxed">{member.bio}</p>
                   </div>
@@ -329,13 +330,30 @@ export default function AboutPage() {
                 <h2 className="mb-4 text-xl font-semibold uppercase text-red-500">
                   PARTNERS AND VISIONARIES
                 </h2>
-                <h1 className="mb-6 font-nacelle text-3xl font-semibold text-gray-100 md:text-4xl">
+                <h1 className="mb-6 font-nacelle text-3xl font-semibold md:text-4xl">
                   Investors & Advisors
                 </h1>
                 <p className="mx-auto max-w-3xl text-center text-lg text-gray-400">
                   Introducing our esteemed roster of accomplished investors and advisors. Explore this section to learn more about the individuals shaping the future of our platform and discover the invaluable insights they bring to our community.
                 </p>
               </div>
+
+
+                {/* Bottom illustration */}
+            <div className="mt-24 flex justify-center">
+              <div className="relative max-w-2xl">
+                <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-gradient-to-br from-red-500/20 to-indigo-600/20 blur-3xl" />
+                <div className="absolute -left-10 -bottom-10 h-40 w-40 rounded-full bg-gradient-to-br from-indigo-600/20 to-red-500/20 blur-3xl" />
+                <div className="illustration-container">
+                  <img
+                    src="/img/file5.svg"
+                    alt="Galaxy Connection"
+                    className="relative z-10 max-w-full h-auto"
+                    style={{ minHeight: "230px" }}
+                  />
+                </div>
+              </div>
+            </div>
               
               {/* Partners grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -355,7 +373,7 @@ export default function AboutPage() {
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-white">{partner.name}</h3>
+                      <h3 className="text-lg font-bold  ">{partner.name}</h3>
                       <p className="text-indigo-400 text-sm">{partner.role}</p>
                       <p className="text-gray-400 text-sm">{partner.company}</p>
                     </div>
@@ -364,20 +382,7 @@ export default function AboutPage() {
               </div>
             </div>
             
-            {/* Bottom illustration */}
-            <div className="mt-24 flex justify-center">
-              <div className="relative max-w-2xl">
-                <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-gradient-to-br from-red-500/20 to-indigo-600/20 blur-3xl" />
-                <div className="absolute -left-10 -bottom-10 h-40 w-40 rounded-full bg-gradient-to-br from-indigo-600/20 to-red-500/20 blur-3xl" />
-                <div className="illustration-container">
-                  <img
-                    src="/images/galaxy-connection.svg"
-                    alt="Galaxy Connection"
-                    className="relative z-10 max-w-full h-auto"
-                  />
-                </div>
-              </div>
-            </div>
+          
           </div>
         </div>
       </div>

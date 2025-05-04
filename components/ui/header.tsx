@@ -44,7 +44,7 @@ export default function Header() {
                   <li>
                     <Link
                       href="/startup"
-                      className="text-sm text-gray-300 hover:text-white flex py-2 px-4"
+                      className="text-sm text-gray-300 hover:  flex py-2 px-4"
                       onClick={() => {}}
                     >
                       For Startups
@@ -53,7 +53,7 @@ export default function Header() {
                   <li>
                     <Link
                       href="/funding"
-                      className="text-sm text-gray-300 hover:text-white flex py-2 px-4"
+                      className="text-sm text-gray-300 hover:  flex py-2 px-4"
                       onClick={() => {}}
                     >
                       Get Funding
@@ -62,7 +62,7 @@ export default function Header() {
                   <li>
                     <Link
                       href="/mentorship"
-                      className="text-sm text-gray-300 hover:text-white flex py-2 px-4"
+                      className="text-sm text-gray-300 hover:  flex py-2 px-4"
                       onClick={() => {}}
                     >
                       Mentorship
@@ -73,7 +73,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/investors"
-                  className="flex items-center px-3 py-2 text-sm font-medium text-gray-300 transition duration-150 ease-in-out hover:text-white"
+                  className="flex items-center px-3 py-2 text-sm font-medium text-gray-300 transition duration-150 ease-in-out hover: "
                 >
                   Investors
                 </Link>
@@ -83,7 +83,7 @@ export default function Header() {
                 <li>
                     <Link
                       href="/about"
-                      className="text-sm text-gray-300 hover:text-white flex py-2 px-4"
+                      className="text-sm text-gray-300 hover:  flex py-2 px-4"
                       onClick={() => {}}
                     >
                       About Us
@@ -92,7 +92,7 @@ export default function Header() {
                   <li>
                     <Link
                       href="/portfolio"
-                      className="text-sm text-gray-300 hover:text-white flex py-2 px-4"
+                      className="text-sm text-gray-300 hover:  flex py-2 px-4"
                       onClick={() => {}}
                     >
                       Portfolio
@@ -101,7 +101,7 @@ export default function Header() {
                   <li>
                     <Link
                       href="/partners"
-                      className="text-sm text-gray-300 hover:text-white flex py-2 px-4"
+                      className="text-sm text-gray-300 hover:  flex py-2 px-4"
                       onClick={() => {}}
                     >
                       Partners
@@ -113,7 +113,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/contact"
-                  className="flex items-center px-3 py-2 text-sm font-medium text-gray-300 transition duration-150 ease-in-out hover:text-white"
+                  className="flex items-center px-3 py-2 text-sm font-medium text-gray-300 transition duration-150 ease-in-out hover: "
                 >
                   Contact Us
                 </Link>
@@ -129,7 +129,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/signin"
-                  className="btn-sm ml-2 bg-linear-to-t from-red-500 to-indigo-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-lg shadow-red-500/25 hover:bg-[length:100%_200%]"
+                  className="btn-sm ml-2 bg-linear-to-t from-red-500 to-indigo-600 bg-[length:100%_100%] bg-[bottom]   shadow-lg shadow-red-500/25 hover:bg-[length:100%_200%]"
                 >
                   <span>Sign in</span>
                 </Link>

@@ -46,7 +46,7 @@ export default function InvestorsPage() {
               <h2 className="mb-4 text-xl font-semibold uppercase text-indigo-500">
                 WHAT WE SERVE
               </h2>
-              <h1 className="mb-6 font-nacelle text-4xl font-semibold text-gray-100 md:text-5xl">
+              <h1 className="mb-6 font-nacelle text-4xl font-semibold  md:text-5xl">
                 We are the best Platform for <span className="text-red-500">Investors</span><br />
                 to Build a Super portfolio
               </h1>
@@ -55,12 +55,12 @@ export default function InvestorsPage() {
               </p>
               <div className="mt-2">
                 <a
-                  className="btn group bg-linear-to-t from-indigo-600 to-red-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] sm:w-auto"
+                  className="btn group bg-linear-to-t from-indigo-600 to-red-500 bg-[length:100%_100%] bg-[bottom]   shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] sm:w-auto"
                   href="#0"
                 >
                   <span className="relative inline-flex items-center">
                     Join As Investor
-                    <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
+                    <span className="ml-1 tracking-normal  /50 transition-transform group-hover:translate-x-0.5">
                       -&gt;
                     </span>
                   </span>
@@ -72,11 +72,12 @@ export default function InvestorsPage() {
             <div className="flex items-center justify-center" data-aos="fade-left">
               <div className="relative">
                 <div className="absolute -right-6 -top-6 h-80 w-80 rounded-full bg-gradient-to-br from-red-500/30 to-indigo-600/20 blur-3xl" />
-                <div className="relative z-10 backdrop-blur-sm bg-gray-900/30 p-6 rounded-2xl border border-gray-700/50 shadow-2xl">
+                <div className="relative z-10 ">
                   <img
-                    src="/images/investor-meeting.svg" 
+                    src="/img/investor.svg" 
                     alt="Investment Platform"
                     className="max-w-full h-auto"
+                    style={{ minHeight: "410px" }}
                   />
                 </div>
               </div>
@@ -87,12 +88,13 @@ export default function InvestorsPage() {
           <div className="mt-32" data-aos="fade-up">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="order-2 lg:order-1">
-                <div className="relative backdrop-blur-sm bg-gray-900/30 p-6 rounded-2xl border border-gray-700/50 shadow-xl">
-                  <div className="absolute -left-10 -bottom-10 h-40 w-40 rounded-full bg-gradient-to-br from-red-500/20 to-indigo-600/20 blur-3xl" />
+                <div className="relative backdrop-blur-sm  ">
+                  <div className="absolute -left-10 -bottom-10 h-40 w-40 " />
                   <img
-                    src="/images/pitching-sessions.svg" 
+                    src="/img/session.svg" 
                     alt="Pitching Sessions"
                     className="relative z-10 max-w-full h-auto"
+                    style={{ minHeight: "410px" }}
                   />
                 </div>
               </div>
@@ -101,7 +103,7 @@ export default function InvestorsPage() {
                 <h3 className="mb-2 text-xl font-semibold uppercase text-red-500">
                   PITCHING SESSIONS
                 </h3>
-                <h2 className="mb-6 text-3xl font-bold text-white">Only the Best</h2>
+                <h2 className="mb-6 text-3xl font-bold  ">Only the Best</h2>
                 <p className="text-gray-400 mb-6">
                   Adopt conducts regular pitching sessions where quality startups are pitched in a closed room. Investors get an opportunity to invest in these startups. It allows investors to syndicate on a deal and share the risk.
                 </p>
@@ -123,7 +125,7 @@ export default function InvestorsPage() {
                 <h3 className="mb-2 text-xl font-semibold uppercase text-red-500">
                   PORTFOLIO MANAGEMENT
                 </h3>
-                <h2 className="mb-6 text-3xl font-bold text-white">Outstanding Quality</h2>
+                <h2 className="mb-6 text-3xl font-bold  ">Outstanding Quality</h2>
                 <p className="text-gray-400 mb-6">
                   Adopt manages and track the progress of all the investee companies. Get access to regular updates, Monthly MIS, Business Networking, Mentorship and Future Fundraising Activities.
                 </p>
@@ -137,12 +139,13 @@ export default function InvestorsPage() {
               </div>
               
               <div>
-                <div className="relative backdrop-blur-sm bg-gray-900/30 p-6 rounded-2xl border border-gray-700/50 shadow-xl">
-                  <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-gradient-to-br from-indigo-600/20 to-red-500/20 blur-3xl" />
+                <div className="relative backdrop-blur-sm  ">
+                  <div className="absolute -right-10 -top-10 h-40 w-40" />
                   <img
-                    src="/images/portfolio-management.svg" 
+                    src="/img/quality.svg" 
                     alt="Portfolio Management"
                     className="relative z-10 max-w-full h-auto"
+                    style={{ minHeight: "410px" }}
                   />
                 </div>
               </div>
@@ -153,12 +156,13 @@ export default function InvestorsPage() {
           <div className="mt-32 mb-16" data-aos="fade-up">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="order-2 lg:order-1">
-                <div className="relative backdrop-blur-sm bg-gray-900/30 p-6 rounded-2xl border border-gray-700/50 shadow-xl">
-                  <div className="absolute -left-10 -bottom-10 h-40 w-40 rounded-full bg-gradient-to-br from-purple-500/20 to-indigo-600/20 blur-3xl" />
+                <div className="relative backdrop-blur-sm  ">
+                  <div className="absolute -left-10 -bottom-10 h-40 w-40" />
                   <img
-                    src="/images/networking.svg" 
+                    src="/img/networking.svg" 
                     alt="Networking"
                     className="relative z-10 max-w-full h-auto"
+                    style={{ minHeight: "410px" }}
                   />
                 </div>
               </div>
@@ -167,7 +171,7 @@ export default function InvestorsPage() {
                 <h3 className="mb-2 text-xl font-semibold uppercase text-red-500">
                   NETWORKING
                 </h3>
-                <h2 className="mb-6 text-3xl font-bold text-white">Truly Top-Notch</h2>
+                <h2 className="mb-6 text-3xl font-bold  ">Truly Top-Notch</h2>
                 <p className="text-gray-400 mb-6">
                   Get to interact and network with successful Business Owners, CXO's, Entrepreneurs and like minded individuals.
                 </p>
@@ -188,20 +192,20 @@ export default function InvestorsPage() {
               <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-gradient-to-br from-red-500/20 to-purple-500/20 blur-3xl -z-10" />
               <div className="absolute -left-20 -bottom-20 h-64 w-64 rounded-full bg-gradient-to-br from-indigo-600/20 to-blue-500/20 blur-3xl -z-10" />
               
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to grow your investment portfolio?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold   mb-6">Ready to grow your investment portfolio?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Join our network of successful investors and get access to premium startups and investment opportunities.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <a
                   href="#0"
-                  className="btn bg-gradient-to-r from-red-500 to-indigo-600 text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="btn bg-gradient-to-r from-red-500 to-indigo-600   px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   Become An Investor
                 </a>
                 <a
                   href="#0"
-                  className="btn bg-transparent border border-gray-500 text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-xl hover:border-white transition-all duration-300"
+                  className="btn bg-transparent border border-gray-500   px-8 py-3 rounded-lg shadow-lg hover:shadow-xl hover:border-white transition-all duration-300"
                 >
                   Schedule a Call
                 </a>
